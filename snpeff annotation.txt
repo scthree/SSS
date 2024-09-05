@@ -1,0 +1,7 @@
+java -Xmx128g -jar snpEff.jar \
+-v \
+Mmur_3.0_NCBI \
+-stats annot_joint_vars.html \
+joint_vars.vcf.gz > annot_joint_vars.vcf
+
+

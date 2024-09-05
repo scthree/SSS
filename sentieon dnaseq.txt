@@ -1,0 +1,25 @@
+## Mapping reads with BWA-MEM, sorting
+sentieon bwa mem -M -R "@RG\tID:$group\tSM:$sample\tPL:$platform" -t $nt -K 10000000 Mmur_3.0_genomic.fa fastq1 fastq2 || echo -n 'error' ) | sentieon util sort -r Mmur_3.0_genomic.fa -o $sample.sorted.bam -t $nt --sam2bam -i -
+
+## Calculating quality metrics
+sentieon driver -t $nt -r Mmur_3.0_genomic.fa -i $sample.sorted.bam --algo GCBias --summary $sample.gc_summary.txt $sample.gc_metrics.txt --algo MeanQualityByCycle $sample.mq_metrics.txt --algo QualDistribution $sample.qd_metrics.txt --algo InsertSizeMetricAlgo $sample.is_metrics.txt --algo AlignmentStat $sample.aln_metrics.txt
+sentieon plot GCBias -o $sample.gc-report.pdf $sample.gc_metrics.txt
+sentieon plot MeanQualityByCycle -o $sample.mq-report.pdf $sample.mq_metrics.txt
+sentieon plot QualDistribution -o $sample.qd-report.pdf $sample.qd_metrics.txt
+sentieon plot InsertSizeMetricAlgo -o $sample.is-report.pdf $sample.is_metrics.txt
+
+## Removing duplicate reads
+sentieon driver -t $nt -i $sample.sorted.bam --algo LocusCollector --fun score_info $sample.score.txt
+sentieon driver -t $nt -i $sample.sorted.bam --algo Dedup --rmdup --score_info $sample.score.txt --metrics $sample.dedup_metrics.txt $sample.deduped.bam
+
+## BQSR calculation
+sentieon driver -t $nt -r Mmur_3.0_genomic.fa -i $sample.deduped.bam --algo QualCal $sample.recal_data.table
+sentieon driver -t $nt -r Mmur_3.0_genomic.fa -i $sample.deduped.bam -q $sample.recal_data.table --algo QualCal $sample.recal_data.table.post --algo ReadWriter $sample.recaled.bam
+sentieon driver -t $nt --algo QualCal --plot --before $sample.recal_data.table --after $sample.recal_data.table.post $sample.recal.csv 
+sentieon plot QualCal -o $sample.recal_plots.pdf $sample.recal.csv
+
+## Variant calling and applying BQSR
+sentieon driver -t $nt -r Mmur_3.0_genomic.fa -i $sample.deduped.bam -q $sample.recal_data.table --algo Haplotyper --emit_conf=10 --call_conf=30 $sample.output-hc.vcf.gz
+sentieon driver -t $nt -r Mmur_3.0_genomic.fa -i $sample.deduped.bam -q $sample.recal_data.table --algo Haplotyper --emit_conf=10 --call_conf=30 --emit_mode gvcf $sample.output-hc.g.vcf.gz
+
+

@@ -1,0 +1,39 @@
+sentieon driver -r Mmur_3.0_genomic.fa --algo GVCFtyper \
+-v 261BBA.output-hc.g.vcf.gz \
+-v 300AA.output-hc.g.vcf.gz \
+-v 300AB.output-hc.g.vcf.gz \
+-v 300AC.output-hc.g.vcf.gz \
+-v 241EA.output-hc.g.vcf.gz \
+-v 261BB.output-hc.g.vcf.gz \
+-v 300A.output-hc.g.vcf.gz \
+-v 300ACA.output-hc.g.vcf.gz \
+-v 277AB.output-hc.g.vcf.gz \
+-v 208CBE.output-hc.g.vcf.gz \
+-v 288H.output-hc.g.vcf.gz \
+-v 223HCB.output-hc.g.vcf.gz \
+-v 245BAB.output-hc.g.vcf.gz \
+-v 374C.output-hc.g.vcf.gz \
+-v 283E.output-hc.g.vcf.gz \
+-v 352A.output-hc.g.vcf.gz \
+-v 245BAA.output-hc.g.vcf.gz \
+-v 275BBC.output-hc.g.vcf.gz \
+-v 277AH.output-hc.g.vcf.gz \
+-v 204FD.output-hc.g.vcf.gz \
+-v 283BB.output-hc.g.vcf.gz \
+-v 316A.output-hc.g.vcf.gz \
+-v 277C.output-hc.g.vcf.gz \
+-v 283C.output-hc.g.vcf.gz \
+-v 288F.output-hc.g.vcf.gz \
+-v 244DBD.output-hc.g.vcf.gz \
+-v 241E.output-hc.g.vcf.gz \
+-v 261BBC.output-hc.g.vcf.gz \
+-v Antoine.output-hc.g.vcf.gz \
+-v Bernard.output-hc.g.vcf.gz \
+-v Inina.output-hc.g.vcf.gz \
+-v Martine.output-hc.g.vcf.gz \
+-v Nadine.output-hc.g.vcf.gz \
+-v Pascal.output-hc.g.vcf.gz \
+-v Stumpy.output-hc.g.vcf.gz \
+--emit_conf 10 --call_conf 30 joint_vars.vcf.gz
+
+

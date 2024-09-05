@@ -1,0 +1,36 @@
+cat annot_joint_vars.vcf \
+| java -Xmx128g -jar SnpSift.jar filter \
+"\
+isRef( GEN[277AB] ) & \
+isRef( GEN[208CBE] ) & \
+isRef( GEN[288H] ) & \
+isRef( GEN[223HCB] ) & \
+isRef( GEN[245BAB] ) & \
+isRef( GEN[374C] ) & \
+isRef( GEN[283E] ) & \
+isRef( GEN[352A] ) & \
+isRef( GEN[245BAA] ) & \
+isRef( GEN[275BBC] ) & \
+isRef( GEN[277AH] ) & \
+isRef( GEN[283BB] ) & \
+isRef( GEN[316A] ) & \
+isRef( GEN[277C] ) & \
+isRef( GEN[283C] ) & \
+isRef( GEN[288F] ) & \
+isRef( GEN[244DBD] ) & \
+isRef( GEN[261BB] ) & \
+isRef( GEN[300A] ) & \
+isRef( GEN[300ACA] ) & \
+isRef( GEN[241E] ) & \
+isRef( GEN[261BBC] ) & \
+isHet( GEN[261BBA] ) & isHet( GEN[241EA] ) & isHet( GEN[300AA] ) & isHet( GEN[300AB] ) & isHet( GEN[300AC] ) & isHet( GEN[204FD] ) & \
+isRef( GEN[Antoine] ) & \
+isRef( GEN[Bernard] ) & \
+isRef( GEN[Inina] ) & \
+isRef( GEN[Martine] ) & \
+isRef( GEN[Nadine] ) & \
+isRef( GEN[Pascal] ) & \
+isRef( GEN[Stumpy] )" \
+> ADfiltered_annot_joint_vars.vcf
+
+

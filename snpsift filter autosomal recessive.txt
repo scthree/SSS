@@ -1,0 +1,41 @@
+cat annot_joint_vars.vcf \
+| java -Xmx128g -jar SnpSift.jar filter \
+"\
+(isRef( GEN[Antoine] ) | isHet( GEN[Antoine] )) & \
+(isRef( GEN[Bernard] ) | isHet( GEN[Bernard] )) & \
+(isRef( GEN[Inina] ) | isHet( GEN[Inina] )) & \
+(isRef( GEN[Martine] ) | isHet( GEN[Martine] )) & \
+(isRef( GEN[Nadine] ) | isHet( GEN[Nadine] )) & \
+(isRef( GEN[Pascal] ) | isHet( GEN[Pascal] )) & \
+(isRef( GEN[Stumpy] ) | isHet( GEN[Stumpy] )) & \
+(isRef( GEN[277AB] ) | isHet( GEN[277AB] )) & \
+(isRef( GEN[208CBE] ) | isHet( GEN[208CBE] )) & \
+(isRef( GEN[288H] ) | isHet( GEN[288H] )) & \
+(isRef( GEN[223HCB] ) | isHet( GEN[223HCB] )) & \
+(isRef( GEN[245BAB] ) | isHet( GEN[245BAB] )) & \
+(isRef( GEN[374C] ) | isHet( GEN[374C] )) & \
+(isRef( GEN[283E] ) | isHet( GEN[283E] )) & \
+(isRef( GEN[352A] ) | isHet( GEN[352A] )) & \
+(isRef( GEN[245BAA] ) | isHet( GEN[245BAA] )) & \
+(isRef( GEN[275BBC] ) | isHet( GEN[275BBC] )) & \
+(isRef( GEN[277AH] ) | isHet( GEN[277AH] )) & \
+(isRef( GEN[283BB] ) | isHet( GEN[283BB] )) & \
+(isRef( GEN[316A] ) | isHet( GEN[316A] )) & \
+(isRef( GEN[277C] ) | isHet( GEN[277C] )) & \
+(isRef( GEN[283C] ) | isHet( GEN[283C] )) & \
+(isRef( GEN[288F] ) | isHet( GEN[288F] )) & \
+(isRef( GEN[244DBD] ) | isHet( GEN[244DBD] )) & \
+(isRef( GEN[261BBC] ) | isHet( GEN[261BBC] )) & \
+isHet( GEN[261BB] ) & \
+isHet( GEN[300A] ) & \
+isHet( GEN[300ACA] ) & \
+isHet( GEN[241E] ) & \
+(isHom( GEN[261BBA] ) & isVariant( GEN[261BBA] )) & \
+(isHom( GEN[241EA] ) & isVariant( GEN[241EA] )) & \
+(isHom( GEN[300AA] ) & isVariant( GEN[300AA] )) & \
+(isHom( GEN[300AB] ) & isVariant( GEN[300AB] )) & \
+(isHom( GEN[300AC] ) & isVariant( GEN[300AC] )) & \
+(isHom( GEN[204FD] ) & isVariant( GEN[204FD] ))" \
+> ARfiltered_annot_joint_vars.vcf
+
+
