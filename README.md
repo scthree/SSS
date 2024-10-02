@@ -8,7 +8,7 @@
 Sample fastq files can be downloaded at: https://www.ncbi.nlm.nih.gov/sra<br/>
 Mmur3.0 refseq can be downloaded at: https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000165445.2/
 
-All software versions used are below. Please download from their respective github repos (and follow dl instructions there). Installation of each is less than 1-5 minutes<br/>
+All software versions used are below. Please download from their respective github repos (and follow dl instructions there). Installation of each is less than 1-5 minutes.<br/>
 
 Whole-genome sequencing read quality assessment: FastQC (v0.11.9)<br/>
 Mmur 3.0 genome assembly (accession GCF_000165445.2)<br/>
