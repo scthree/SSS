@@ -1,6 +1,7 @@
 # Code for the following:<br/>
 (please see Methods from Chang et al 2025 for more details)
 https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
+
 ## **1) Whole-genome sequencing and variant identification**<br/>
    - Alignment of whole-genome sequencing reads<br/>
    - Variant calling<br/>
@@ -8,7 +9,7 @@ https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
    - Variant annotation and effect prediction<br/>
    - Variant filtering<br/>
 
-All software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
+Scripts used are in the "WGS and variant identification" folder. Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
 
 Whole-genome sequencing read quality assessment: FastQC (v0.11.9)<br/>
 Mmur 3.0 genome assembly (accession GCF_000165445.2)<br/>
