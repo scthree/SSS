@@ -9,7 +9,7 @@ https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
    - Variant annotation and effect prediction<br/>
    - Variant filtering<br/>
 
-Scripts can be found in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
+Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
 
 Whole-genome sequencing read quality assessment: FastQC (v0.11.9)<br/>
 Mmur 3.0 genome assembly (accession GCF_000165445.2)<br/>
@@ -20,7 +20,9 @@ Variant annotation and filtering: SnpEff & SnpSift toolbox (v4.5)
 Sample fastq files can be downloaded at: https://www.ncbi.nlm.nih.gov/sra<br/>
 Mmur3.0 refseq can be downloaded at: https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000165445.2/
 
-Alignment file generated is in BAM format. Variant calling file generated is in VCF format. Runtime to complete pipeline for a single fastq file (~30x coverage, 3Gb file) is ~2 days.
+Alignment file generated is in BAM format. Variant calling file generated is in VCF format. Runtime to complete pipeline for a single fastq file (~30x coverage, 3Gb file) is ~2 days.<br/>
+
+Scripts can be found in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. 
 
 ## **2) Linkage analysis and LOD score calculation**<br/>
 
