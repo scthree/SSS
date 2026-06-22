@@ -9,7 +9,7 @@ https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
    - Variant annotation and effect prediction<br/>
    - Variant filtering<br/>
 
-Scripts used are in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
+Scripts can be found in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
 
 Whole-genome sequencing read quality assessment: FastQC (v0.11.9)<br/>
 Mmur 3.0 genome assembly (accession GCF_000165445.2)<br/>
@@ -31,4 +31,4 @@ dl: https://www.cog-genomics.org/plink/2.0/<br/>
 dl: https://csg.sph.umich.edu/abecasis/merlin/download/<br/>
 dl: https://csg.sph.umich.edu/abecasis/LAMP/download/<br/>
 
-Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline (~1,500 variants) is <2-3 minutes.
+Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline (~1,500 variants) is <2-3 minutes. Scripts are in the [Linkage analysis and LOD score calculation](./Linkage%20analysis%20and%20LOD%20score%20calculation) folder.
