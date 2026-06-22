@@ -22,7 +22,7 @@ Mmur3.0 refseq can be downloaded at: https://www.ncbi.nlm.nih.gov/datasets/genom
 
 Alignment file generated is in BAM format. Variant calling file generated is in VCF format. Runtime to complete pipeline for a single fastq file (~30x coverage, 3Gb file) is ~2 days.<br/>
 
-Scripts can be found in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. 
+Scripts are in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. 
 
 ## **2) Linkage analysis and LOD score calculation**<br/>
 
