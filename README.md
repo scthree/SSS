@@ -1,5 +1,4 @@
-# Code for the following:<br/>
-(please see Methods from Chang et al 2025 for more details)
+# Code for Chang et al 2025 (see Methods)
 https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
 
 ## **Whole-genome sequencing and variant identification**<br/>
