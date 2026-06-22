@@ -16,7 +16,7 @@ Alignment and variant identification: Sentieon DNAseq (202112.01) and Burrow-Whe
 Alignment quality assessment: QualiMap (v2.2.1)<br/>
 Variant annotation and filtering: SnpEff & SnpSift toolbox (v4.5)
 
-Please see Paper Methods for how to run whole-genome sequencing/alignment/variant calling pipepline<br/>
+Please see Paper Methods for how to run whole-genome sequencing/alignment/variant calling pipeline<br/>
 Alignment file generated is in BAM format<br/>
 Variant calling file generated is in VCF format<br/>
 Approx runtime to complete pipeline for a single fastq file (~30x coverage, 3Gb file) is 2 days
