@@ -30,4 +30,4 @@ dl: https://www.cog-genomics.org/plink/2.0/<br/>
 dl: https://csg.sph.umich.edu/abecasis/merlin/download/<br/>
 dl: https://csg.sph.umich.edu/abecasis/LAMP/download/<br/>
 
-Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline is <2-3 minutes.
+Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline (~1,500 variants) is <2-3 minutes.
