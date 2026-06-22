@@ -1,9 +1,10 @@
 ## Code for the following: 
-1) Alignment of whole-genome sequencing reads
-2) Variant calling
-3) Joint genotyping
-4) Variant annotation and effect prediction
-5) Variant filtering
+1) Whole-genome sequencing and variant identification
+   a. Alignment of whole-genome sequencing reads
+   b. Variant calling
+   c. Joint genotyping
+   d. Variant annotation and effect prediction
+   d. Variant filtering
 
 Sample fastq files can be downloaded at: https://www.ncbi.nlm.nih.gov/sra<br/>
 Mmur3.0 refseq can be downloaded at: https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000165445.2/
@@ -16,7 +17,8 @@ Alignment and variant identification: Sentieon DNAseq (202112.01) and Burrow-Whe
 Alignment quality assessment: QualiMap (v2.2.1)<br/>
 Variant annotation and filtering: SnpEff & SnpSift toolbox (v4.5)
 
-Please see Paper Methods for how to run whole-genome sequencing/alignment/variant calling pipeline<br/>
 Alignment file generated is in BAM format<br/>
 Variant calling file generated is in VCF format<br/>
 Approx runtime to complete pipeline for a single fastq file (~30x coverage, 3Gb file) is 2 days
+
+2) Linkage analysis and LOD score calculation
