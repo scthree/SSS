@@ -31,4 +31,6 @@ dl: https://www.cog-genomics.org/plink/2.0/<br/>
 dl: https://csg.sph.umich.edu/abecasis/merlin/download/<br/>
 dl: https://csg.sph.umich.edu/abecasis/LAMP/download/<br/>
 
-Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline (~1,500 variants) is <2-3 minutes. Scripts are in the [Linkage analysis and LOD score calculation](./Linkage%20analysis%20and%20LOD%20score%20calculation) folder.
+Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline (~1,500 variants) is <2-3 minutes.<br/>
+
+Scripts are in the [Linkage analysis and LOD score calculation](./Linkage%20analysis%20and%20LOD%20score%20calculation) folder.
