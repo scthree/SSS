@@ -2,7 +2,7 @@
 (please see Methods from Chang et al 2025 for more details)
 https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
 
-## **1) Whole-genome sequencing and variant identification**<br/>
+## **Whole-genome sequencing and variant identification**<br/>
    - Alignment of whole-genome sequencing reads<br/>
    - Variant calling<br/>
    - Joint genotyping<br/>
@@ -24,7 +24,7 @@ Alignment file generated is in BAM format. Variant calling file generated is in 
 
 Scripts are in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. 
 
-## **2) Linkage analysis and LOD score calculation**<br/>
+## **Linkage analysis and LOD score calculation**<br/>
 
 - VCF to PLINK2 format conversion: PLINK (v2.0)<br/>
 dl: https://www.cog-genomics.org/plink/2.0/<br/>
