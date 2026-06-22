@@ -9,7 +9,7 @@ https://www.biorxiv.org/content/10.1101/2025.05.28.655959v1
    - Variant annotation and effect prediction<br/>
    - Variant filtering<br/>
 
-Scripts used are in the "WGS and variant identification" folder. Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
+Scripts used are in the [WGS and variant identification](./WGS%20and%20variant%20identification) folder. Software versions are listed below. Please download from their respective github repos. Installation of each is less than 1-5 minutes.<br/>
 
 Whole-genome sequencing read quality assessment: FastQC (v0.11.9)<br/>
 Mmur 3.0 genome assembly (accession GCF_000165445.2)<br/>
