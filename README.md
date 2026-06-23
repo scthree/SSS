@@ -24,7 +24,7 @@ Scripts are in the [WGS and variant identification](./WGS%20and%20variant%20iden
 
 ## **Linkage analysis and LOD score calculation**<br/>
 
-- VCF to PLINK2 format conversion: PLINK (v2.0)<br/>
+- VCF to MERLIN/LAMP format conversion: PLINK (v2.0)<br/>
 dl: https://www.cog-genomics.org/plink/2.0/<br/>
 
 - Parametric linkage analysis and LOD score calcuation: MERLIN (v1.1.2) and LAMP (v0.0.12)<br/>
