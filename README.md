@@ -33,4 +33,4 @@ dl: https://csg.sph.umich.edu/abecasis/LAMP/download/<br/>
 
 Installation time is less than 1-2 minutes. Simulated datasets can be found in the MERLIN dl link above. Output files are in text format. Runtime to complete pipeline (~1,300 variants) is ~8 hours.<br/>
 
-Scripts are in the [Linkage analysis and LOD score calculation](./Linkage%20analysis%20and%20LOD%20score%20calculation) folder.
+Scripts are in the [Linkage analysis and LOD score](./Linkage%20analysis%20and%20LOD%20score%20calculation) folder.
