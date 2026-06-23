@@ -1,0 +1,58 @@
+## Subset VCF
+## Extract all variants on chromosome 7
+	bcftools view -r NC_033666.1 -Oz -o chr7.vcf.gz genome.vcf.gz
+	bcftools index -f chr7.vcf.gz
+## Extract all 352 SSS-linked variants on chromosome 7
+	bcftools view -R 352only.bed chr7.vcf.gz -Oz -o AR_352only.vcf.gz
+	bcftools index AR_352only.vcf.gz
+
+## Convert VCF to PLINK 2.0 format
+plink2 --vcf chr7.vcf.gz --fam sss_pedigree.fam --make-pgen --out chr7
+
+## Subsample snps to 1 per 100 kb
+## Then convert to VCF format
+plink2 --pfile chr7 --bp-space 100000 --make-pgen --out chr7_100kb
+plink2 --pfile chr7_100kb --export vcf --out chr7_100kb
+bcftools index chr7_100kb.vcf.gz
+
+## Merge VCF files
+bcftools concat AR_352only.vcf.gz chr7_100kb.vcf.gz -Oz -o merged_352-chr7_100kb.vcf.gz
+bcftools index merged_352-chr7_100kb.vcf.gz
+
+## Convert merged VCF to PLINK 2.0 format
+plink2 --vcf merged_352-chr7_100kb.vcf.gz --fam sss_pedigree.fam --make-pgen --out merged_352-chr7_100
+
+## Keep biallelic variants only
+plink2 --pfile merged_352-chr7_100 --max-alleles 2 --make-pgen --out merged_352-chr7_100_biallelic
+
+## Convert to MERLIN format
+plink2 --pfile merged_352-chr7_100_biallelic --export ped --out merged_352-chr7_100
+
+## Edit map file
+## names each var -> snp1, snp2, etc; changes var POS to cM
+awk 'BEGIN { OFS = "\t" } { print $1, "snp" NR, $4 / 1000000 }' merged_352-chr7_100.map > lamp_tmp.map
+
+## Create dat file
+(echo -e "A\tSSS"; awk '{printf "M\t%s\n", $2}' lamp_tmp.map) > lamp_tmp.dat
+
+## Identify snps with Mendelian inheritance errors
+pedstats -p merged_352-chr7_100.ped -d lamp_tmp.dat 
+(then manually create bed file with these snps -> exclude_snps.bed)
+
+## Remove these snps and convert to MERLIN format
+plink2 --pfile merged_352-chr7_100_biallelic --exclude bed1 exclude_snps.bed --make-pgen --out merged_excludedsnps
+plink2 --pfile merged_excludedsnps --export ped --out lamp_excludedsnps
+
+## Edit map file and Create dat file
+## Convert chromosome number to integer
+repeat Edit map file step per above: lamp_excludedsnps.map -> cc.map
+repeat Create dat file step per above: cc.map -> lamp.dat
+parse cc.map file into candidate.map and frame.map files so that:
+	candidate.map contains only variants spanning SSS interval (snps 165 to 525)
+	frame.map contains all variants excluding this interval (snps 1 to 1323)
+sed 's/NC_033666.1/7/' candidate.map > candidate_fixed.map
+sed 's/NC_033666.1/7/' frame.map > frame_fixed.map
+
+## Create Mendelian disease model file
+echo -e "sss\t0.001\t0,0,1.0\trare_AR" > rare_AR_parametric.model
+

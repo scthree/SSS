@@ -1,0 +1,16 @@
+merlin \
+   -d lamp.dat \
+   -p lamp_excludedsnps.ped \
+   -m cc.map \
+   --model rare_AR_parametric.model \
+   -ff > merlin.results
+
+lamp \
+   -d lamp.dat \
+   -p lamp_excludedsnps.ped \
+   -c candidate_fixed.map \
+   -f frame_fixed.map \
+   --prev 0.001 \
+   --recessive \
+   --maxbits 20 > lamp.results
+
